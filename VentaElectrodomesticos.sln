@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaElectrodomesticos.Core", "VentaElectrodomesticosCore\VentaElectrodomesticos.Core.csproj", "{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaElectrodomesticos.Desktop", "VentaElectrodomesticosDesktop\VentaElectrodomesticos.Desktop.csproj", "{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = VentaElectrodomesticos.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

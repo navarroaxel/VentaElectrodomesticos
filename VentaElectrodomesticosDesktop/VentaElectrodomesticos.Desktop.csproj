@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A48A67CE-1EF1-4AD4-96EB-7C083A2FD676}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaElectrodomesticos.Desktop</RootNamespace>
+    <AssemblyName>VentaElectrodomesticos.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\MsgBox.cs" />
+    <Compile Include="Extensions\CheckBoxListExtensions.cs" />
+    <Compile Include="Extensions\ComboBoxExtensions.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Consultas\ClientesPremium.resx">
+      <DependentUpon>ClientesPremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Consultas\MejoresCategorias.resx">
+      <DependentUpon>MejoresCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Consultas\TableroControl.resx">
+      <DependentUpon>TableroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\ConsultaCategorias.resx">
+      <DependentUpon>ConsultaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\ConsultaClientes.resx">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\UcConsultaCategorias.resx">
+      <DependentUpon>UcConsultaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\UcConsultaClientes.resx">
+      <DependentUpon>UcConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\UcSucursalAnio.resx">
+      <DependentUpon>UcSucursalAnio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudCliente.resx">
+      <DependentUpon>CrudCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudEmpleado.resx">
+      <DependentUpon>CrudEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudForm.resx">
+      <DependentUpon>CrudForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudProducto.resx">
+      <DependentUpon>CrudProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudRol.resx">
+      <DependentUpon>CrudRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CrudUsuario.resx">
+      <DependentUpon>CrudUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Crud\CuForm.resx">
+      <DependentUpon>CuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Help\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operaciones\AsignacionStock.resx">
+      <DependentUpon>AsignacionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operaciones\EfectuarPago.resx">
+      <DependentUpon>EfectuarPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operaciones\Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Common\Try.cs" />
+    <Compile Include="Views\Consultas\ClientesPremium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Consultas\ClientesPremium.Designer.cs">
+      <DependentUpon>ClientesPremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Consultas\MejoresCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Consultas\MejoresCategorias.Designer.cs">
+      <DependentUpon>MejoresCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Consultas\TableroControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Consultas\TableroControl.Designer.cs">
+      <DependentUpon>TableroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ConsultaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\ConsultaCategorias.Designer.cs">
+      <DependentUpon>ConsultaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\ConsultaClientes.Designer.cs">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\UcConsultaCategorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\UcConsultaCategorias.Designer.cs">
+      <DependentUpon>UcConsultaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\UcConsultaClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\UcConsultaClientes.Designer.cs">
+      <DependentUpon>UcConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\UcSucursalAnio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\UcSucursalAnio.Designer.cs">
+      <DependentUpon>UcSucursalAnio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudCliente.Designer.cs">
+      <DependentUpon>CrudCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudEmpleado.Designer.cs">
+      <DependentUpon>CrudEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudForm.Designer.cs">
+      <DependentUpon>CrudForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudProducto.Designer.cs">
+      <DependentUpon>CrudProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudRol.Designer.cs">
+      <DependentUpon>CrudRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CrudUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CrudUsuario.Designer.cs">
+      <DependentUpon>CrudUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuCliente.Designer.cs">
+      <DependentUpon>CuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuEmpleado.Designer.cs">
+      <DependentUpon>CuEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuForm.Designer.cs">
+      <DependentUpon>CuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuProducto.Designer.cs">
+      <DependentUpon>CuProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuRol.Designer.cs">
+      <DependentUpon>CuRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Crud\CuUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud\CuUsuario.Designer.cs">
+      <DependentUpon>CuUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Help\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operaciones\AsignacionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Operaciones\AsignacionStock.Designer.cs">
+      <DependentUpon>AsignacionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operaciones\EfectuarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Operaciones\EfectuarPago.Designer.cs">
+      <DependentUpon>EfectuarPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operaciones\Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Operaciones\Facturacion.Designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VentaElectrodomesticosCore\VentaElectrodomesticos.Core.csproj">
+      <Project>{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}</Project>
+      <Name>VentaElectrodomesticos.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

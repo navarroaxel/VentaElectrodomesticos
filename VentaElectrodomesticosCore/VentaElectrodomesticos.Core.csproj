@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8F759FD-3C99-4B50-8BBC-7A28E0B078C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaElectrodomesticos.Core</RootNamespace>
+    <AssemblyName>VentaElectrodomesticos.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=2.4.5.724, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BusinessException.cs" />
+    <Compile Include="Common\ClientProxy.cs" />
+    <Compile Include="Common\IClientProxy.cs" />
+    <Compile Include="Common\Proxy.cs" />
+    <Compile Include="Common\Repository.cs" />
+    <Compile Include="Common\RepositoryLocator.cs" />
+    <Compile Include="Common\ServiceLocator.cs" />
+    <Compile Include="Common\Transact.cs" />
+    <Compile Include="Extensions\DataReaderExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Model\Containers\ProductoSucursalStock.cs" />
+    <Compile Include="Model\Containers\SucursalFiltros.cs" />
+    <Compile Include="Model\Containers\TableroControlInfo.cs" />
+    <Compile Include="Model\Entities\Categoria.cs" />
+    <Compile Include="Model\Entities\Cliente.cs" />
+    <Compile Include="Model\Entities\ICrudEntity.cs" />
+    <Compile Include="Model\Entities\Empleado.cs" />
+    <Compile Include="Model\Entities\Factura.cs" />
+    <Compile Include="Model\Entities\FacturaPago.cs" />
+    <Compile Include="Model\Entities\FacturaProducto.cs" />
+    <Compile Include="Model\Entities\Funcionalidad.cs" />
+    <Compile Include="Model\Entities\IKeyValueEntity.cs" />
+    <Compile Include="Model\Entities\ILogicalRemovableEntity.cs" />
+    <Compile Include="Model\Entities\IngresoStock.cs" />
+    <Compile Include="Model\Entities\Producto.cs" />
+    <Compile Include="Model\Entities\ProductoCategoria.cs" />
+    <Compile Include="Model\Entities\ProductoMarca.cs" />
+    <Compile Include="Model\Entities\ProductoStock.cs" />
+    <Compile Include="Model\Entities\Provincia.cs" />
+    <Compile Include="Model\Entities\Rol.cs" />
+    <Compile Include="Model\Entities\Sucursal.cs" />
+    <Compile Include="Model\Entities\TipoEmpleado.cs" />
+    <Compile Include="Model\Entities\Usuario.cs" />
+    <Compile Include="Model\Containers\EmpleadoFiltros.cs" />
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICategoriasRepository.cs" />
+    <Compile Include="Repositories\ICrudRepository.cs" />
+    <Compile Include="Repositories\IEmpleadosRepository.cs" />
+    <Compile Include="Repositories\IFacturasRepository.cs" />
+    <Compile Include="Repositories\IFuncionalidadesRepository.cs" />
+    <Compile Include="Repositories\Implementations\BaseRepository.cs" />
+    <Compile Include="Repositories\Implementations\CategoriasRepository.cs" />
+    <Compile Include="Repositories\Implementations\ClientesRepository.cs" />
+    <Compile Include="Repositories\IClientesRepository.cs" />
+    <Compile Include="Repositories\Implementations\EmpleadosRepository.cs" />
+    <Compile Include="Repositories\Implementations\FacturasRepository.cs" />
+    <Compile Include="Repositories\Implementations\FuncionalidadesRepository.cs" />
+    <Compile Include="Repositories\Implementations\ProductosRepository.cs" />
+    <Compile Include="Repositories\Implementations\ProvinciasRepository.cs" />
+    <Compile Include="Repositories\Implementations\RolesRepository.cs" />
+    <Compile Include="Repositories\Implementations\StoredProcedureNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoredProcedureNames.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementations\SucursalesRepository.cs" />
+    <Compile Include="Repositories\Implementations\UsuariosRepository.cs" />
+    <Compile Include="Repositories\IProductosRepository.cs" />
+    <Compile Include="Repositories\IProvinciasRepository.cs" />
+    <Compile Include="Repositories\IRolesRepository.cs" />
+    <Compile Include="Repositories\ISucursalesRepository.cs" />
+    <Compile Include="Repositories\IUsuariosRepository.cs" />
+    <Compile Include="Repositories\RepositoriesContainer.cs" />
+    <Compile Include="Resources\MessageProvider.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageProvider.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MessageProviderExtensions.cs" />
+    <Compile Include="Services\ICategoriaService.cs" />
+    <Compile Include="Services\IClienteService.cs" />
+    <Compile Include="Services\ICrudService.cs" />
+    <Compile Include="Services\IEmpleadoService.cs" />
+    <Compile Include="Services\IFacturaService.cs" />
+    <Compile Include="Services\ILoginService.cs" />
+    <Compile Include="Services\Implementations\CategoriaService.cs" />
+    <Compile Include="Services\Implementations\ClienteService.cs" />
+    <Compile Include="Services\Implementations\CrudService.cs" />
+    <Compile Include="Services\Implementations\EmpleadoService.cs" />
+    <Compile Include="Services\Implementations\FacturaService.cs" />
+    <Compile Include="Services\Implementations\LoginService.cs" />
+    <Compile Include="Services\Implementations\ProductoService.cs" />
+    <Compile Include="Services\Implementations\ProvinciaService.cs" />
+    <Compile Include="Services\Implementations\RolService.cs" />
+    <Compile Include="Services\Implementations\SucursalService.cs" />
+    <Compile Include="Services\Implementations\UsuarioService.cs" />
+    <Compile Include="Services\IProductoService.cs" />
+    <Compile Include="Services\IProvinciaService.cs" />
+    <Compile Include="Services\IRolService.cs" />
+    <Compile Include="Services\ISucursalService.cs" />
+    <Compile Include="Services\IUsuarioService.cs" />
+    <Compile Include="Services\ServicesContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Repositories\Implementations\StoredProcedureNames.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StoredProcedureNames.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MessageProvider.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageProvider.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
